@@ -1,26 +1,30 @@
-console.log("Hy waleed how are you ?");
-// Now using function //
+// Callbacks function
+function loadScript(src, callback) {
 
-// function function1() {
-//     let a = prompt(" Enter the value ? ");
-//     a = Number.parseInt(a);
-//     if (a < 0) {
-//         document.getElementById("p1").innerHTML = "You are Baby";
-//     }
-//     else if (a < 9) {
-//         document.getElementById("p1").innerHTML = "You Are not adult";
-//     }
-//     else if (a < 18 && a >= 9) {
-//         document.getElementById("p1").innerHTML = "But You are a Medium ";
-//     }
-//     else if (a < 25 && a >= 18) {
-//         document.getElementById('bigpic').style.display = 'block';
-//     }
-//     else {
-//         // console.log("Total Number = " + a);
-//         document.getElementById("p1").innerHTML = "Please Enter the Valid Age ?";
-//     }
-//     return true;
-//     // var pic = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnZc4nu61fo87fwxBfVNGokRj1TP8t6IrdEQ&usqp=CAU"
-//     // document.getElementById('bigpic').src = pic.replace('90x90', '225x225');
-// }
+    var script = document.createElement("script");
+    script.src = src;
+    // ******************* //
+    script.onload = function() {
+      console.log("Loaded script with SRC: " + src)
+      callback(null, src);
+    }
+    // ******************* //
+    script.onerror = function() {
+      console.log("Error loading script with SRC: " + src);
+      callback(new Error("Src got some error"))
+    }
+    document.body.appendChild(script);
+  }
+  // ******************* //
+  function goodmorning(error, src) {
+    
+    if (error) {
+      console.log(error)
+      return
+    }
+    alert('Bootstap Link' + ' = ' +  src);
+  }
+  
+  loadScript("https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js", goodmorning) 
+
+// All code check on web browser console //
