@@ -18,10 +18,10 @@ let a = new Promise( ( resolve, reject ) => {
     alert( "Promise is Pending..." );
     alert( "Please wait..." );
     setTimeout( () => {
-        // console.log( "Now Promise is Fulfilled");
-        // resolve(true);
-        console.log( "Now Promise is rejected");
-        reject(new Error("I am an Error"));
+        console.log( "Now Promise is Fulfilled");
+        resolve("heklo waleed");
+        // console.log( "Now Promise is rejected");
+        // reject(new Error("I am an Error"));
     }, 4000 );
     console.log( "Hello I am Promise" );
     console.log( "Promise is Pending..." );
