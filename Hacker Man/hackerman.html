@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>HackerMan</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+        color: #72ff14;
+        font-size: 18px;
+    }
+
+    body {
+        /* background-image: linear-gradient(155deg,
+                #45dde8,
+                #58e156); */
+                background-image: url(https://wallpaperaccess.com/full/2308570.jpg);
+                background-size: cover;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+        align-items: center;
+    }
+
+    .terminal {
+        background:rgb(0,0,0,0.3);
+        width: 70vw;
+        border-radius: 42px;
+    }
+
+    .terminal-head {
+        display: flex;
+        margin-top: 25px;
+        margin-left: 25px;
+    }
+
+    .terminal-head div {
+        margin-right: 8px;
+    }
+
+    .terminal-head .red {
+        height: 15px;
+        width: 15px;
+        background-color:
+            red;
+        border-radius: 100px;
+    }
+
+    .terminal-head .yellow {
+        height: 15px;
+        width: 15px;
+        background-color:
+            yellow;
+        border-radius: 100px;
+    }
+
+    .terminal-head .green {
+        height: 15px;
+        width: 15px;
+        background-color:
+            green;
+        border-radius: 100px;
+    }
+
+    .container-body {
+        margin: 30px 50px;
+        font-weight: 600 !important;
+
+    }
+
+    .container-body div {
+        margin: 10px 0;
+    }
+
+    .container-body div span {
+        color:
+            #fff;
+        margin-right: 10px;
+    }
+
+    .container-body div span.username {
+        color:
+            red;
+        margin-right: 0;
+    }
+
+
+    @media screen and (min-width: 768px) {
+        * {
+
+            font-size: 15px;
+        }
+
+        .terminal {
+            height: 75vh;
+        }
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="terminal">
+            <div class="terminal-head">
+                <div class="red"></div>
+                <div class="yellow"></div>
+                <div class="green"></div>
+            </div>
+            <div class="container-body">
+                <div id="first-text"></div>
+                <div id="second-text"></div>
+                <div id="third-text"></div>
+                <div id="fourth-text"></div>
+
+                <div id="sixth-text"></div>
+                <div id="seventh-text"></div>
+                <div id="eighthtext"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./Hackerman.js"></script>
+</body>
+
+</html>
